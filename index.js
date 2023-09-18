@@ -28,7 +28,7 @@ app.get('/',(req,res)=>
     res.send({title:'Data'})
 })
 
-app.get('/add-data,', async (req,res)=>
+app.get('/add-data', async (req,res)=>
 {
     try{
         await Data.insertMany([
@@ -51,6 +51,7 @@ app.get('/add-data,', async (req,res)=>
                 "id": 75
               }
         ]);
+        res.send("Data Added");
     }catch(err){
         console.log("err",+err);
     }
