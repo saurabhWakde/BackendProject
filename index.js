@@ -32,7 +32,6 @@ app.get('/add-data', async (req,res)=>
 {
     try{
         await Data.insertMany([
-            [
                 {
                   "image_url": "./images/img1.jpeg",
                   "destination_title": "Wat Chaiwatthanaram",
@@ -933,7 +932,7 @@ app.get('/add-data', async (req,res)=>
                   "description": "Big brother focus meeting task itself minute. Structure daughter tax Congress lead mind call decade.",
                   "id": 100
                 }
-              ]
+              
         ]);
         res.send("Data Added");
     }catch(err){
